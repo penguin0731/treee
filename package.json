@@ -1,0 +1,22 @@
+{
+  "name": "treee",
+  "version": "0.0.1",
+  "description": "create a tree for your directory",
+  "main": "index.js",
+  "bin": {
+    "treee": "src/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["tree", "tools", "directory", "dir", "file"],
+  "author": "penguin0731",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/penguin0731/treee.git"
+  },
+  "bugs": {
+    "url": "https://github.com/penguin0731/treee/issues"
+  },
+  "license": "MIT"
+}
