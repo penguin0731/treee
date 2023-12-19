@@ -4,19 +4,39 @@
   "description": "create a tree for your directory",
   "main": "index.js",
   "bin": {
-    "treee": "src/index.js"
+    "treee": "dist/index.js"
   },
+  "type": "module",
   "scripts": {
+    "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["tree", "tools", "directory", "dir", "file"],
+  "keywords": [
+    "tree",
+    "tools",
+    "directory",
+    "dir",
+    "file"
+  ],
   "author": "penguin0731",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/penguin0731/treee.git"
+    "type": "git",
+    "url": "https://github.com/penguin0731/treee.git"
   },
   "bugs": {
     "url": "https://github.com/penguin0731/treee/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "glob": "^10.3.10",
+    "rollup": "^4.8.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup-plugin-clear": "^2.0.7"
+  }
 }
