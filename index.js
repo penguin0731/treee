@@ -2,7 +2,7 @@
 
 import { program } from "commander";
 import pkg from "./package.json";
-import Treee from "./Treee.js";
+import Treev from "./Treev.js";
 
 const cwd = process.cwd();
 program
@@ -21,5 +21,5 @@ program.version(pkg.version, "-v, --version");
 program.parse(process.argv);
 
 const options = program.opts();
-const treee = new Treee(options);
-treee.create();
+const treev = new Treev(options);
+treev.create();

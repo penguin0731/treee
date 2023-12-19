@@ -1,10 +1,10 @@
 {
-  "name": "treee",
+  "name": "treev",
   "version": "0.0.1",
   "description": "create a tree for your directory",
   "main": "index.js",
   "bin": {
-    "treee": "dist/index.js"
+    "treev": "dist/index.js"
   },
   "type": "module",
   "scripts": {

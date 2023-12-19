@@ -24,6 +24,15 @@ class Treee {
     this.ignore = ignore;
     this.noIcons = noIcons;
     this.treeString = "";
+    this.init();
+  }
+
+  static emojiMap = {};
+
+  init() {
+    for (const key in emojiMap) {
+      Treee.emojiMap[key] = this.noIcons ? "" : emojiMap[key];
+    }
   }
 
   // 创建树形结构数据
@@ -66,10 +75,10 @@ class Treee {
       const value = treeData[key];
       if (typeof value === "string") {
         // 文件
-        this.treeString += `\n${connectSymbol}${emojiMap.file}${value}`;
+        this.treeString += `\n${connectSymbol}${Treee.emojiMap.file}${value}`;
       } else if (Array.isArray(value)) {
         // 目录
-        this.treeString += `\n${connectSymbol}${emojiMap.directory}${key}`;
+        this.treeString += `\n${connectSymbol}${Treee.emojiMap.directory}${key}`;
         connectSymbol = connectSymbol.replaceAll(contain, border);
         connectSymbol = connectSymbol.replaceAll(
           new RegExp(`${last}|${line}`, "g"),
@@ -86,7 +95,7 @@ class Treee {
           }
 
           if (typeof v === "string") {
-            this.treeString += `\n${connectSymbol}${emojiMap.file}${v}`;
+            this.treeString += `\n${connectSymbol}${Treee.emojiMap.file}${v}`;
           } else {
             this[draw](v, connectSymbol);
           }
