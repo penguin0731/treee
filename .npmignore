@@ -1,3 +1,4 @@
+node_modules/
 index.js
 Treev.js
 rollup.config.js
