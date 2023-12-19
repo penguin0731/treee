@@ -1,12 +1,12 @@
 {
   "name": "treev",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": "create a tree for your directory",
-  "main": "index.js",
   "bin": {
     "treev": "dist/index.js"
   },
   "type": "module",
+  "files": ["dist"],
   "scripts": {
     "build": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1"
